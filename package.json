@@ -1,0 +1,27 @@
+{
+  "name": "sakara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+    "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+"type": "module",
+    "url": "git+https://github.com/xeonaxes/Sakara.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xeonaxes/Sakara/issues"
+  },
+  "homepage": "https://github.com/xeonaxes/Sakara#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.17"
+  }
+}
