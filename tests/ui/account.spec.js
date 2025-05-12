@@ -13,8 +13,8 @@ test.describe('User authorization', () => {
     await handleCountryModal(page);
 
     await account.authAccount('vlason05@gmail.com', 'lizaveta228');
+    await account.submitButtonAccount()
   });
-
 
   test('Authorization with non-existent user', async ({ page }) => {
     const account = new Account(page);
@@ -23,5 +23,17 @@ test.describe('User authorization', () => {
     await handleCountryModal(page);
 
     await account.authAccount('testtest@gmail.com', 'testetstets');
+    await account.submitButtonAccount()
   });
+
+test('User password recovery', async ({ page }) => {
+    const account = new Account(page);
+    await account.navigate(BASE_URL);
+    await handleCookieBanner(page);
+    await handleCountryModal(page);
+
+    await account.authAccount('testtest@gmail.com', 'testetstes');
+    await account.resetPasswordAccount('testtest@gmail.com');
+  });
+
 });
